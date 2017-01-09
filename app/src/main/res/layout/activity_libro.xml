@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_libro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#b5bb3ced"
+    tools:context="com.example.jose_.appbiblioteca.ActivityLibro">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:hint="Ej id: 1"
+        android:id="@+id/txtEditorial"
+        android:background="#FFFFFF"
+        android:layout_alignBottom="@+id/tvEditorial"
+        android:layout_alignLeft="@+id/btnAñadir"
+        android:layout_alignStart="@+id/btnAñadir"
+        android:layout_toLeftOf="@+id/btnEditorial"
+        android:layout_toStartOf="@+id/btnEditorial" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir Nuevo Libro"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Titulo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ISBN:"
+        android:textSize="20dp"
+        android:id="@+id/tvIsbn"
+        android:textColor="#000000"
+        android:layout_below="@+id/Titulo"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLibro"
+        android:text="Título:"
+        android:layout_below="@+id/tvIsbn"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAutor"
+        android:text="Autor:"
+        android:layout_below="@+id/tvLibro"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEditorial"
+        android:text="Editorial:"
+        android:layout_below="@+id/tvAutor"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvGenero"
+        android:text="Género:"
+        android:layout_below="@+id/tvEditorial"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Añadir"
+        android:textSize="20dp"
+        android:id="@+id/btnAñadir"
+        android:layout_below="@+id/cbDisponible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:hint="Ej: 12356789"
+        android:id="@+id/txtIsbn"
+        android:layout_above="@+id/tvLibro"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#FFFFFF"
+        android:layout_alignLeft="@+id/Titulo"
+        android:layout_alignStart="@+id/Titulo" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="text"
+        android:hint="Ej: El Quijote"
+        android:id="@+id/txtTitulo"
+        android:layout_alignBottom="@+id/tvLibro"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#FFFFFF"
+        android:layout_alignLeft="@+id/txtIsbn"
+        android:layout_alignStart="@+id/txtIsbn" />
+
+    <CheckBox
+        android:text="Disponible  "
+        android:textSize="20dp"
+        android:onClick="onCheckboxClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbDisponible"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tvGenero"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFFFFF"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="text"
+        android:hint="Ej: Fantasía"
+        android:id="@+id/txtGenero"
+        android:layout_alignBottom="@+id/tvGenero"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#FFFFFF"
+        android:layout_toRightOf="@+id/tvEditorial"
+        android:layout_toEndOf="@+id/tvEditorial" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/unnamed"
+        android:id="@+id/btnVolver"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/btnInicio"
+        android:layout_alignRight="@+id/tvIsbn"
+        android:layout_alignEnd="@+id/tvIsbn" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/unnamed1"
+        android:id="@+id/btnInicio"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:hint="Ej id: 1"
+        android:id="@+id/txtAutor"
+        android:background="#FFFFFF"
+        android:layout_above="@+id/tvEditorial"
+        android:layout_alignLeft="@+id/txtTitulo"
+        android:layout_alignStart="@+id/txtTitulo"
+        android:layout_toStartOf="@+id/btnAutor"
+        android:layout_toLeftOf="@+id/btnAutor" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Autores"
+        android:textSize="10dp"
+        android:id="@+id/btnAutor"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/btnAñadir"
+        android:layout_toEndOf="@+id/btnAñadir" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Editorial"
+        android:textSize="10dp"
+        android:id="@+id/btnEditorial"
+        android:layout_below="@+id/txtAutor"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/txtAutor"
+        android:layout_toEndOf="@+id/txtAutor" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:inputType="text"
+        android:textSize="0dp"
+        android:id="@+id/resultado"
+        android:background="#00000000"
+        android:layout_above="@+id/btnVolver"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
